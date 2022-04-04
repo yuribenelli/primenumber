@@ -15,8 +15,7 @@ func main() {
 	//creo slice con capacity max = input utente
 	sli := make([]int, 0, input)
 	//ciclo esterno (test per input e input - j)
-	for j := input; j > 0; j-- {
-
+	for j := input; j > 1; j-- {
 		for i := input - 1; i >= 2; i-- { // test interno per divisori inferiori di input
 			x := input % i
 			if x == 0 { //se divisibile allora input non è un numero primo
