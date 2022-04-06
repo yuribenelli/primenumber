@@ -15,6 +15,7 @@ func main() {
 	//creo slice con capacity max = input utente
 	sli := make([]int, 0, input)
 	//ciclo esterno (test per input e input - j)
+	inputSave := input
 	for j := input; j > 1; j-- {
 		for i := input - 1; i >= 2; i-- { // test interno per divisori inferiori di input
 			x := input % i
@@ -31,5 +32,5 @@ func main() {
 		input--
 	}
 	fmt.Println(sli)
-	fmt.Printf("%v\t%v\n", cap(sli), len(sli))
+	fmt.Printf("Ci sono %v numeri primi compresi fra 0 e %v \n", len(sli), inputSave)
 }
